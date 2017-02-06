@@ -1,7 +1,7 @@
 import numpy as np
 import time
 
-
+# 2) NumPy use
 def test_run():
     #    print(np.array([(2,3,4),(5,6,7)]))
     #    print(np.zeros((4, 6), dtype=np.int_))
@@ -12,6 +12,7 @@ def test_run():
     print(a.shape)
     print(a.sum())
     print(a.max(axis=1))
+
 
 def time_check():
     t1= time.time()
