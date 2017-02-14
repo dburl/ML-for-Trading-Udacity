@@ -1,5 +1,9 @@
 import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 import time
+import pandas_use
+
 
 # 2) NumPy use
 def test_run():
@@ -24,3 +28,13 @@ def time_check():
     print(nd1.mean())
     t3=time.time()
     print("Time spent:", t3 - t2)
+
+
+def rolling_mean():
+    dates = pd.date_range('2012-01-01','2012-12-31')
+    symbols = ['SPY']
+    df = pandas_use.get_data(symbols, dates)
+    ax= df['SPY'].plot(title='SPY rolling mean', label='SPY')
+    rm_SPY=pd.rolling_mean(df['SPY'],window=20)
+    rm_SPY.plot(label='Rolling mean',ax=ax)
+    plt.show()

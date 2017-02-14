@@ -15,4 +15,5 @@ if __name__ == "__main__":
 
     # Lesson: 01-03 (use of NumPy)
     #   np_use.test_run()
-    np_use.time_check()
+    #   np_use.time_check()
+    np_use.rolling_mean()
