@@ -1,5 +1,6 @@
 import pandas_use as pd_use
 import numpy_use as np_use
+import lesson1_05 as l1_05
 
 
 if __name__ == "__main__":
@@ -16,4 +17,7 @@ if __name__ == "__main__":
 
     # Lesson: 01-04 (use of NumPy)
     #   np_use.rolling_mean()
-    np_use.daily_return()
+    #   np_use.daily_return()
+
+    # Lesson: 01-05
+    l1_05.missing_data()
