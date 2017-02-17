@@ -1,6 +1,7 @@
 import pandas_use as pd_use
 import numpy_use as np_use
 import lesson1_05 as l1_05
+import lesson1_06 as l1_06
 
 
 if __name__ == "__main__":
@@ -20,4 +21,8 @@ if __name__ == "__main__":
     #   np_use.daily_return()
 
     # Lesson: 01-05
-    l1_05.missing_data()
+    # l1_05.missing_data()
+
+    # Lesson: 1-06
+    # l1_06.plot_histogram()
+    l1_06.plot_scatter()
