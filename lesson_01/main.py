@@ -2,9 +2,6 @@ import pandas_use as pd_use
 import numpy_use as np_use
 
 
-
-
-
 if __name__ == "__main__":
     # Lessons: from  01-01 to 01-02 (use of Pandas)
     #   pd_use.unit_test()
@@ -16,4 +13,7 @@ if __name__ == "__main__":
     # Lesson: 01-03 (use of NumPy)
     #   np_use.test_run()
     #   np_use.time_check()
-    np_use.rolling_mean()
+
+    # Lesson: 01-04 (use of NumPy)
+    #   np_use.rolling_mean()
+    np_use.daily_return()

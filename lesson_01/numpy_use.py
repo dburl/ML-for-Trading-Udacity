@@ -34,7 +34,32 @@ def rolling_mean():
     dates = pd.date_range('2012-01-01','2012-12-31')
     symbols = ['SPY']
     df = pandas_use.get_data(symbols, dates)
-    ax= df['SPY'].plot(title='SPY rolling mean', label='SPY')
-    rm_SPY=pd.rolling_mean(df['SPY'],window=20)
-    rm_SPY.plot(label='Rolling mean',ax=ax)
+    ax = df['SPY'].plot(title='SPY rolling mean and others', label='SPY')
+    rm_SPY = pd.rolling_mean(df['SPY'], window=20)
+    rm_SPY.plot(label='Rolling mean', ax=ax)
+    rstd_SPY = pd.rolling_std(df['SPY'], window=20)
+
+    bbmax_SPY = rm_SPY+2*rstd_SPY
+    bbmax_SPY.plot(label='Bollinger Band max', ax=ax)
+    bbmin_SPY = rm_SPY - 2*rstd_SPY
+    bbmin_SPY.plot(label='Bollinger Band min', ax=ax)
+
+    rmax_SPY = pd.rolling_max(df['SPY'], window=20)
+    rmax_SPY.plot(label='Rolling max', ax=ax)
+    rmin_SPY = pd.rolling_min(df['SPY'], window=20)
+    rmin_SPY.plot(label='Rolling min', ax=ax)
+
+    ax.set_xlabel("Date")
+    ax.set_ylabel("Price")
+    plt.show()
+
+
+def daily_return():
+    dates = pd.date_range('2012-01-01', '2012-12-31')
+    symbols = ['SPY', 'XOM']
+    df = pandas_use.get_data(symbols, dates)
+    daily_return = (df / df.shift(1)) - 1
+    daily_return.ix[0, :] = 0
+    daily_return.plot(label='Daily return')
+    print(daily_return)
     plt.show()
