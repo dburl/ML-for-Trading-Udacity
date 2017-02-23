@@ -2,6 +2,7 @@ import pandas_use as pd_use
 import numpy_use as np_use
 import lesson1_05 as l1_05
 import lesson1_06 as l1_06
+import lesson1_08 as l1_08
 
 
 if __name__ == "__main__":
@@ -24,5 +25,8 @@ if __name__ == "__main__":
     # l1_05.missing_data()
 
     # Lesson: 1-06
-    # l1_06.plot_histogram()
-    l1_06.plot_scatter()
+    #   l1_06.plot_histogram()
+    #   l1_06.plot_scatter()
+
+    # Lesson 1-07
+    l1_08.optimizer()
