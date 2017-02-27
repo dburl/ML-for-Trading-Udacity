@@ -11,6 +11,6 @@ def f(X):
 
 def optimizer():
     Xguess = 2.0
-    min_result =spo.minimize(f, Xguess, method = 'SLSQp', option ={'disp':True})
+    min_result =spo.minimize(f, Xguess, method = 'SLSQp')
     print("Minima found at:")
     print("X={}, Y={}".format(min_result.x,min_result.fun))
