@@ -5,6 +5,7 @@ import lesson1_06 as l1_06
 import lesson1_08 as l1_08
 
 
+
 if __name__ == "__main__":
     # Lessons: from  01-01 to 01-02 (use of Pandas)
     #   pd_use.unit_test()
@@ -28,5 +29,9 @@ if __name__ == "__main__":
     #   l1_06.plot_histogram()
     #   l1_06.plot_scatter()
 
-    # Lesson 1-07
-    l1_08.optimizer()
+    # Lesson 1-07 .. 1-08
+    #   l1_08.optimizer()
+    #   l1_08.fit_line_exe()
+    #   l1_08.fit_poly_exe()
+    # Lesson 1-09
+
